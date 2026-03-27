@@ -1,7 +1,8 @@
 streamlit
-numpy
+numpy<2.0.0
 pandas
 matplotlib
 scikit-learn
 gensim
 nltk
+scipy
