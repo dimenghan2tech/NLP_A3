@@ -1,8 +1,8 @@
 streamlit
-numpy<2.0.0
+numpy==1.26.4
+scipy==1.12.0
 pandas
 matplotlib
 scikit-learn
-gensim
+gensim==4.3.2
 nltk
-scipy
