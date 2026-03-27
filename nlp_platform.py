@@ -11,7 +11,16 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Download necessary NLTK data
-nltk.download('punkt')
+#nltk.download('punkt')
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+# 如果你的代码还用到了 punkt_tab (新版 NLTK 可能需要)
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
 
 st.set_page_config(page_title="Semantic Analysis Platform", layout="wide")
 
