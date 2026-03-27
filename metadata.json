@@ -1,0 +1,5 @@
+{
+  "name": "Semantic Analysis Explorer",
+  "description": "An interactive educational platform for exploring NLP models including TF-IDF, LSA, Word2Vec, GloVe, and FastText.",
+  "requestFramePermissions": []
+}
