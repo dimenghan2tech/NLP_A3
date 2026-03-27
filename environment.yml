@@ -1,0 +1,17 @@
+name: nlp_app
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy<2.0.0
+  - scipy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - gensim=4.3.2
+  - nltk
+  - pip
+  - pip:
+      - streamlit
+      - google-generativeai
