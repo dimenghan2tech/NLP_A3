@@ -10,6 +10,26 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from sklearn.metrics.pairwise import cosine_similarity
 
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+# 自动化下载必要资源
+@st.cache_resource
+def download_nltk_data():
+    resources = ['punkt', 'punkt_tab', 'averaged_perceptron_tagger']
+    for res in resources:
+        try:
+            nltk.download(res, quiet=True)
+        except:
+            pass
+
+download_nltk_data()
+
 # Download necessary NLTK data
 #nltk.download('punkt')
 try:
